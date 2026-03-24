@@ -1,2 +1,4 @@
 /.trae
 /stm32-debug-skill.tar.gz
+test-project/*
+swo.log

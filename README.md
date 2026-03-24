@@ -56,9 +56,14 @@ stm32-debug-skill/
 ```
 
 ### 4. 监听 printf 日志 (SWO)
+支持自定义 CPU 主频（如果芯片被配置为了非默认的 16MHz，比如 216MHz，需显式指定以保证波特率正确）：
 ```bash
-# Agent 将执行：
+# Agent 将执行 (默认 16MHz)：
 ./scripts/monitor_swo.sh
+
+# 如果 CPU 配置为 216MHz，则 Agent 将执行：
+./scripts/monitor_swo.sh 216000000
+
 # 并在后台查看 swo.log
 ```
 

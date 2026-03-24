@@ -64,9 +64,17 @@ Example:
 ```
 
 ### 4. Monitor SWO Output
-Capture printf logs via SWO pin:
+Capture printf logs via SWO pin. If the MCU is configured to a non-default clock frequency (e.g., 216MHz), you must pass the CPU frequency in Hz:
+```bash
+./scripts/monitor_swo.sh [cpu_frequency_hz]
+```
+Example (default 16MHz):
 ```bash
 ./scripts/monitor_swo.sh
+```
+Example (216MHz):
+```bash
+./scripts/monitor_swo.sh 216000000
 ```
 Read the log:
 ```bash
